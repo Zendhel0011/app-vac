@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <%- include('partials/setheaders.html')%>
+        <title>Agenda de vacunación</title>
+</head>
+
+<body>
+    <h1>Agéndate para recibir una vacuna contra el Covid-19</h1>
+    <div class="form-container">
+        <form autocomplete="off" id="pform" action="/" method="POST">
+            <h2>Comprobá si estás habilitado</h2>
+            <input type="text" placeholder="Cédula" id="ci" name="ci" pattern="[0-9]{8}"
+                title="Ingrese su cédula sin puntos ni guiones Ej: 11111111" required />
+            <label for="bdate">Fecha de nacimiento:</label>
+            <input type="Date" id="bdate" name="bdate" required />
+            <input type="submit" value="Enviar" id="send" />
+        </form>
+    </div>
+    <div id="demo"></div>
+    <!--<script src="../controller/controller.js"></script>-->
+    <footer>
+        <p>Esta app web es un proyecto escolar para el crecimiento académico y profesional de los desarrolladores.<br>
+            Copyright 2021 de Zendhel Rosales. Todos los derechos reservados.<br> Lucha contra el Covid-19 funciona con
+            node.js</p>
+    </footer>
+</body>
+
+</html>

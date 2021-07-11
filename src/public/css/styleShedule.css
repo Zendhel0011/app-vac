@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    background-image: url("../media/background-img-vacuna.png");
+}
+h1{
+    text-align: center;
+    margin-top: 2vw;
+}
+.form-container{
+    width: 100%;
+    position: relative;
+    top: 5vw;
+    margin-bottom: 10%;
+    z-index: 10;
+
+}
+form {
+    background: #f7f6f2;
+    margin: auto;
+    width: 50%;
+    padding: 2%;
+    box-sizing: border-box;
+    opacity: 0.7;
+}
+form h2 {
+    text-align: center;
+    margin-bottom: 36px;
+}
+input {
+    display: block;
+    width: 85%;
+    margin: 12px auto;
+    padding: 4px;
+    border: none;
+    background: transparent;
+    border-top: 2px solid #58befc;
+    color: #000;
+}
+input::placeholder{
+    color: #58befc;
+    transition: color 0.3s;
+}
+input:hover{
+    background: #58befc;
+    transition: background 0.3s;
+}
+input:hover::placeholder{
+    color: #000;
+    transition: color 0.3s;
+}
+input[type="submit"]{
+    width: 50%;
+    margin: 18px auto;
+    background: #58befc;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+input[type="submit"]:hover{
+    border-top: 2px solid #036cad;
+    background: #036cad;
+    transition: background 0.3s, border 0.3s;
+}
+input[type="radio"]{
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 7%;
+    margin-right: none;
+    width: 5%;
+    height: min-content;
+}
+.gender {
+    margin: 12px 3px;
+    height: min-content;
+}
+form p{
+    color: #58befc;
+    margin: 12px auto;
+    font-size: 0.9em;
+    width: 85%;
+    padding: 4px;
+    border: none;
+    height: 22px;
+    box-sizing: border-box;
+
+}
+form label {
+    color: #58befc;
+    margin-top: 12px;
+    margin-left: 7%;
+}
+input[type="Date"]{
+    color:#58befc;
+}
+
+input[type="Date"]:hover{
+    background:#58befc;
+    color:#000;
+}
+footer {
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 0.7em;
+    background: darkgrey;
+    padding: 2px;
+    box-sizing: border-box;
+    opacity: 0.8;
+}
