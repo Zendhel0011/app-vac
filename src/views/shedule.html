@@ -6,37 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <%- include('partials/setheaders.html')%>
-        <link rel="stylesheet" href="/css/styleShedule.css">
+        <link rel="stylesheet" href="/css/style.css">
         <title>App Agenda vacunación</title>
 
 </head>
 
 <body>
-    <h1> Usted está habilitado para agendarse.</h1>
-    <div id="form-container">
-        <form autocomplete="off" id="pform" action="/shedule" method="POST">
-            <h2>Ingrese los datos para su reserva.</h2>
-            <input type="hidden" name="ci" value=<%=ci %>>
-            <input type="hidden" name="bdate" value=<%=bdate%>>
-            <input type="text" placeholder="Nombre" name="fname" id="name" pattern="[A-Za-z]{5,}" required />
-            <input type="text" placeholder="Apellido" name="lname" id="lastname" pattern="[A-Za-z]{5,}" required />
-            <input type="text" placeholder="Domicilio" name="usAddress" id="address" required />
-            <input type="text" placeholder="Teléfono" name="phone" id="phone" pattern="[0-9]{9}" required />
-            <p>Gender:</p>
-            <input type="radio" name="gender" id="male" value="male">
-            <label for="male" class="gender">Male</label>
-            <input type="radio" name="gender" id="female" value="female">
-            <label for="female" class="gender">Female</label>
-            <input type="radio" name="gender" id="other" value="other">
-            <label for="other" class="gender">Other</label><br>
-            <label for="bdate">Fecha de la primera dosis:</label>
-            <input type="Date" name="date" id="dosedate" required />
-            <input type="submit" value="Comprobar" id="send" />
-        </form>
+    <%- include('partials/navigator.html')%>
+        <header>
+            <h1 class="header"> Usted está habilitado para agendarse.</h1>
+        </header>
 
-    </div>
-    <%- include('partials/footer.html')%>
-        <script src="../controller/sheduleController.js"></script>
+        <div id="form-container">
+            <form autocomplete="off" id="pform" action="/shedule" method="POST">
+                <h2>Ingrese los datos para su reserva.</h2>
+                <input type="hidden" name="ci" value=<%=ci %>>
+                <input type="hidden" name="bdate" value=<%=bdate%>>
+                <input type="text" placeholder="Nombre" name="fname" id="name" pattern="[A-Za-z]{5,}" required />
+                <input type="text" placeholder="Apellido" name="lname" id="lastname" pattern="[A-Za-z]{5,}" required />
+                <input type="text" placeholder="Domicilio" name="usAddress" id="address" required />
+                <input type="text" placeholder="Teléfono" name="phone" id="phone" pattern="[0-9]{9}" required />
+                <p>Gender:</p>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male" class="gender">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female" class="gender">Female</label>
+                <input type="radio" name="gender" id="other" value="other">
+                <label for="other" class="gender">Other</label><br>
+                <label for="bdate">Fecha de la primera dosis:</label>
+                <input type="Date" name="date" id="dosedate" required />
+                <input type="submit" value="Comprobar" id="send" />
+            </form>
+
+        </div>
+        <%- include('partials/footer.html')%>
+            <script src="../controller/sheduleController.js"></script>
 </body>
 
 </html>

@@ -1,14 +1,67 @@
 * {
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
 body{
+    margin: 0;
     background-image: url("../img/background-img-vacuna.png");
+    background-repeat: no-repeat;
+    background-origin: content-box;
 }
-h1{
+.navigator{
+    width: 100%;
+    background-color: lightsteelblue;
+    padding: 2px;
+}
+.navigator h1{
+    margin: auto;
+    padding: 5px;
+    float: left;
+    width: 20%;
+    margin-right: 10%;
+    color: black;
     text-align: center;
-    margin-top: 2vw;
+    text-decoration: none;
+    border: 1px solid lightsteelblue;
+    border-radius: 10px;
+}
+h1 a{
+    text-decoration: none;
+    color: black;
+}
+.list-items{
+    margin: 0;
+    width: 70%;
+    list-style-type: none;
+    overflow: hidden;
+}
+.items{
+    float: right;
+}
+.items__item{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    border: 1px solid lightsteelblue;
+    border-radius: 10px;
+}
+h1 .items__item{
+    padding: 0;
+    display: inline;
+}
+li .items__item:hover{
+    background-color: rgb(153, 163, 175);
+    transition: background 0.3s;
+}
+.navigator h1:hover{
+    background-color: rgb(153, 163, 175);
+    transition: background 0.3s;
+}
+
+.header{
+    text-align: center;
 }
 
 form {
@@ -57,7 +110,18 @@ input[type="submit"]:hover{
     background: #036cad;
     transition: background 0.3s, border 0.3s;
 }
-
+input[type="radio"]{
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 7%;
+    margin-right: none;
+    width: 5%;
+    height: min-content;
+}
+.gender {
+    margin: 12px 3px;
+    height: min-content;
+}
 
 input[type="Date"]{
     color:#58befc;
@@ -74,18 +138,15 @@ form label {
 }
 .form-container{
     width: 100%;
-    position: relative;
-    top: 5vw;
+    margin-bottom: 6%;
 }
 footer {
-    z-index: -1;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    position: relative;
+    overflow: hidden;
     text-align: center;
     width: 100%;
     font-size: 0.7em;
-    background: darkgrey;
+    background: lightsteelblue;
     padding: 2px;
     box-sizing: border-box;
     opacity: 0.8;
